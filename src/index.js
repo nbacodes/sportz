@@ -1,5 +1,5 @@
 import express from 'express'
-import { matchRouter } from './routes/matches';
+import { matchRouter } from './routes/matches.js';
 
 const app = express();
 const port = 8000;
@@ -10,7 +10,7 @@ app.get('/', (req, res) => {
     res.send('Hello from basic verson of index.js')
 })
 
-app.use('/matchs', matchRouter);
+app.use('/matches', matchRouter);
 
 app.listen(port, () => {
     console.log(`Listening on localhost:${port}`);
